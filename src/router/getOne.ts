@@ -22,17 +22,22 @@ export const getOne = async (req: Request<IParams>, res: Response) => {
       return;
     }
 
-    const [population, flag] = await Promise.all([
+    const population = await Promise.any([
       utils.getPopulation(borders.commonName),
-      utils.getFlag(borders.commonName)
+      utils.getPopulation(borders.officialName)
     ]);
+
+    const flag = await Promise.any([
+      utils.getFlag(borders.commonName),
+      utils.getFlag(borders.officialName)
+    ]).catch(() => { });
 
     res.json({
       success: true,
       data: {
         borders: borders.borders,
         population: population.data.populationCounts,
-        flagUrl: flag.data.flag,
+        flagUrl: flag?.data?.flag ?? "",
         officialName: borders.officialName
       }
     });

@@ -62,3 +62,40 @@ Population:
 error: true
 message: string
 ```
+
+---
+
+## Note
+In some cases the country is called by it's __common name__: 
+
+```
+// https://date.nager.at/api/v3/CountryInfo/by
+
+"countryCode": "BY",
+"commonName": "Belarus",
+"officialName": "Republic of Belarus",
+```
+```
+// https://countriesnow.space/api/v0.1/countries/population
+
+"code": "BLR",
+"country": "Belarus",
+```
+
+and in others by it's __official name__:
+
+```
+// https://date.nager.at/api/v3/CountryInfo/cz
+
+"countryCode": "CZ",
+"commonName": "Czechia",
+"officialName": "Czech Republic",
+```
+```
+// https://countriesnow.space/api/v0.1/countries/population
+
+"code": "CZE",
+"country": "Czech Republic",
+```
+
+Also not every country has a flag url.
