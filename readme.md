@@ -13,6 +13,11 @@ npm install
 npm start
 ```
 
+## For tests
+```
+npm test
+```
+
 ---
 
 ## GET: /
