@@ -1,4 +1,21 @@
-# GET: /
+## 1. Clone this repository
+```
+git clone https://github.com/MrInverted/DevelopsToday-test-task---react .
+```
+
+## 2. Install all dependencies
+```
+npm install
+```
+
+## 3. Start project
+```
+npm start
+```
+
+---
+
+## GET: /
 
 ```
 success: true
@@ -11,7 +28,7 @@ Countries:
 ```
 ---
 
-# GET: /:country_code
+## GET: /:country_code
 ```
 success: true
 data: Data
